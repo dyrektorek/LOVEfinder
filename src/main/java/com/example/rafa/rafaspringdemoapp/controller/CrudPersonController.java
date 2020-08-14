@@ -66,13 +66,6 @@ public class CrudPersonController {
 		return "home";
 	}
 	
-	@RequestMapping(value="/ppp")
-	public RedirectView loginValidate(HttpServletRequest req, RedirectAttributes redir){
-		RedirectView redirectView;
-	    redirectView = new RedirectView("/people", true);
-	    redir.addFlashAttribute("startid", 1);
-	    return redirectView;
-	}
 	
 	@RequestMapping(value = "/deleteperson/{instanceId}")
 	public RedirectView  deletePerson(@RequestParam int startid, @PathVariable int instanceId, Model model, HttpServletRequest req, RedirectAttributes redir) {
