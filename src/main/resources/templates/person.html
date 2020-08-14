@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http:/www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="person-out">
+			<div class="flex-rewind">
+				<p class="pierwszy">Previous</p>
+
+				<div class="inside">
+					<h1 class="header">PERSON:</h1>
+					<img src="https://source.unsplash.com/400x400/?random" alt="">
+					<p id="person" th:text="dupa">A</p>
+				</div>
+
+				<p>Next</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var person = document.getElementById('person');
+		console.log(person);
+		person.innerHTML = `First Name: [[${person.firstName}]] <br> Last Name:  [[${person.lastName}]] <br>  Picture: [[${person.pictureUrl}]]`;
+
+		dupa = document.getElementById('dupa');
+		dupa.textContent = "DUPA USTAWIONE";
+		console.log(dupa);
+	</script>
+
+</body>
+
+</html>
